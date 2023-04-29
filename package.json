@@ -1,17 +1,20 @@
 {
+  "publisher": "shuworks",
   "name": "vscode-jump-to-hint",
   "displayName": "Jump to Hint",
-  "description": "Show hints and hit a key to jump to it.",
   "version": "1.2.0",
-  "publisher": "shuworks",
+  "private": true,
+  "packageManager": "pnpm@8.1.1",
+  "description": "Show hints and hit a key to jump to it.",
   "author": "Shuzo Iwasaki <shu.works.7@gmail.com>",
   "license": "MIT",
-  "engines": {
-    "vscode": "^1.46.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shuGH/vscode-jump-to-hint.git"
   },
-  "categories": [
-    "Other"
-  ],
+  "bugs": {
+    "url": "https://github.com/shuGH/vscode-jump-to-hint/issues"
+  },
   "keywords": [
     "jumpy",
     "EasyMotion",
@@ -20,16 +23,20 @@
     "navigation",
     "keybindings"
   ],
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/index.js",
+  "icon": "res/icon_128.png",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "vscode": "^1.46.0"
+  },
   "galleryBanner": {
     "color": "#2ec4cd",
     "theme": "dark"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shuGH/vscode-jump-to-hint.git"
-  },
-  "bugs": {
-    "url": "https://github.com/shuGH/vscode-jump-to-hint/issues"
   },
   "activationEvents": [],
   "contributes": {
@@ -157,13 +164,6 @@
       }
     ]
   },
-  "private": true,
-  "packageManager": "pnpm@8.1.1",
-  "main": "./dist/index.js",
-  "icon": "res/icon_128.png",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "tsup src/index.ts --external vscode",
     "dev": "nr build --watch",
